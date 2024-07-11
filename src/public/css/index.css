@@ -1,0 +1,182 @@
+.nav {
+    display: none;
+}
+
+.contact-form__content {
+    margin: 50px auto 0;
+    max-width: 1080px;
+}
+
+.contact-form__heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.contact-form__heading h2 {
+    font-size: 35px;
+    font-weight: 400;
+}
+
+.form {
+    width: 90%;
+}
+
+.form__group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.form__group-ttl {
+    width: 30%;
+}
+
+.form__group-content {
+    width: 65%;
+}
+
+.form__group--flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form__label--item {
+    font-size: 20px;
+    margin: 0;
+}
+
+.form__label--required {
+    color: #FF9494;
+}
+
+.form__input--name {
+    width: 47%;
+}
+
+.form__input--name input,
+.form__input--email input,
+.form__input--address input,
+.form__input--building input {
+    width: 100%;
+    padding: 10px 0 10px 30px;
+    background-color: #F4F4F4;
+    border: none;
+    font-size: 14px;
+    color: #BEB1A6;
+    appearance: none;
+}
+
+.form__input--tel input {
+    width: 181px;
+    padding: 10px 0 10px 30px;
+    background-color: #F4F4F4;
+    border: none;
+    font-size: 14px;
+    color: #BEB1A6;
+}
+
+.form__tel-hyphen {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.form__textarea textarea {
+    width: 100%;
+    background-color: #F4F4F4;
+    border: none;
+    font-size: 14px;
+    color: #BEB1A6;
+    padding: 10px 0 0 30px;
+    height: 130px;
+    appearance: none;
+}
+
+.form__button {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.form__button-submit {
+    padding: 10px 40px;
+    color: #fff;
+    background-color: #82756A;
+    border: none;
+    cursor: pointer;
+}
+
+/* セレクトボックス */
+.form__select--item {
+    width: 100%;
+    border: none;
+    padding: 10px 0 10px 20px;
+    background-color: #F4F4F4;
+    color: #BEB1A6;
+    font-size: 14px;
+    font-weight: 400;
+    position: relative;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.form__select {
+    position: relative;
+    width: 330px;
+}
+
+.form__select:after {
+    content: "";
+    position: absolute;
+    right: 20px;
+    top: 11px;
+    background: #BEB1A6;
+    height: calc(30px / 2);
+    width: 30px;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+
+/* ラジオボタン */
+.form__input--radio {
+    display: flex;
+    gap: 50px;
+}
+
+.radio-label {
+    font-size: 18px;
+}
+
+.input-radio {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 18px;
+    width: 18px;
+    border: 1px solid #8B7969;
+    border-radius: 50%;
+    position: relative;
+    top: 3px;
+}
+
+.input-radio:before {
+    position: absolute;
+    content: "";
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.input-radio:checked:before {
+    background: #8B7969;
+}
+
+
+/* バリデーション */
+.form__error {
+    color: #FF9494;
+}
