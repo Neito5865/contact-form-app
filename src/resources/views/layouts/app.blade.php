@@ -20,18 +20,18 @@
                     <a href="/" class="header__logo">FashionablyLate</a>
                 </div>
                 <nav class="nav">
-                    {{-- <button class="header-nav__button-register"><a href="/register" class="header-nav__link-register">register</a>
+                    <button class="header-nav__button-register"><a href="/register" class="header-nav__link-register">register</a>
                     </button>
                     <button class="header-nav__button-login"><a href="/login" class="header-nav__link-login">login</a>
-                    </button> --}}
-                    {{-- @if (Auth::check()) --}}
+                    </button>
+                    @if (Auth::check())
                     <form class="header-nav__form" action="/logout" method="post">
                     @csrf
                         <div class="header-nav__button-logout">
                             <input class="header-nav__button-submit" type="submit" value="logout">
                         </div>
                     </form>
-                    {{-- @endif --}}
+                    @endif
                 </nav>
             </div>
         </div>

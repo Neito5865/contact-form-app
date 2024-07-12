@@ -22,7 +22,9 @@
                             <input type="email" name="email" value="{{old('email')}}" placeholder="例: test@example">
                         </div>
                         <div class="form__error">
-                            エラーメッセージ
+                            @error('email')
+                            {{$message}}
+                            @enderror
                         </div>
                     </div>
                 </div>
@@ -35,7 +37,9 @@
                             <input type="password" name="password" placeholder="例: coavhtech1106">
                         </div>
                         <div class="form__error">
-                            エラーメッセージ
+                            @error('password')
+                            {{$message}}
+                            @enderror
                         </div>
                     </div>
                 </div>
