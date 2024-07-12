@@ -49,7 +49,9 @@
             <a class="search-form__button-link" href="/admin">リセット</a>
         </div>
     </div>
-
+    <div class="pagination-custom">
+        {{ $contacts->links() }}
+    </div>
     <div class="contact-table">
         <table class="contact-table__inner">
             <tr class="contact-table__row">
@@ -94,65 +96,64 @@
             @endforeach
         </table>
     </div>
+</div>
 
-    {{-- モーダル --}}
-    <div class="modal" id="modal">
-        <div class="modal__inner">
-            <div class="modal__contents">
-                <div class="modal-close">
-                    <a class="modal-close__link" href="/admin">&times;</a>
+{{-- モーダル --}}
+<div class="modal" id="modal">
+    <div class="modal__inner">
+        <div class="modal__contents">
+            <div class="modal-close">
+                <a class="modal-close__link" href="/admin">&times;</a>
+            </div>
+
+            <div class="modal__content">
+                <div class="modal-table">
+                    <table class="modal-table__inner">
+                        <tr class="modal-table__row">
+                            <th class="modal-table__header">お名前</th>
+                            <td class="modal-table__text" id="modal-name"></td>
+                        </tr>
+                        <tr class="modal-table__row">
+                            <th class="modal-table__header">性別</th>
+                            <td class="modal-table__text" id="modal-gender"></td>
+                        </tr>
+                        <tr class="modal-table__row">
+                            <th class="modal-table__header">メールアドレス</th>
+                            <td class="modal-table__text" id="modal-email"></td>
+                        </tr>
+                        <tr class="modal-table__row">
+                            <th class="modal-table__header">電話番号</th>
+                            <td class="modal-table__text" id="modal-tel"></td>
+                        </tr>
+                        <tr class="modal-table__row">
+                            <th class="modal-table__header">住所</th>
+                            <td class="modal-table__text" id="modal-address"></td>
+                        </tr>
+                        <tr class="modal-table__row">
+                            <th class="modal-table__header">建物名</th>
+                            <td class="modal-table__text" id="modal-building"></td>
+                        </tr>
+                        <tr class="modal-table__row">
+                            <th class="modal-table__header">お問い合わせの種類</th>
+                            <td class="modal-table__text" id="modal-category"></td>
+                        </tr>
+                        <tr class="modal-table__row">
+                            <th class="modal-table__header">お問い合わせ内容</th>
+                            <td class="modal-table__text" id="modal-detail"></td>
+                        </tr>
+                    </table>
                 </div>
-
-                <div class="modal__content">
-                    <div class="modal-table">
-                        <table class="modal-table__inner">
-                            <tr class="modal-table__row">
-                                <th class="modal-table__header">お名前</th>
-                                <td class="modal-table__text" id="modal-name"></td>
-                            </tr>
-                            <tr class="modal-table__row">
-                                <th class="modal-table__header">性別</th>
-                                <td class="modal-table__text" id="modal-gender"></td>
-                            </tr>
-                            <tr class="modal-table__row">
-                                <th class="modal-table__header">メールアドレス</th>
-                                <td class="modal-table__text" id="modal-email"></td>
-                            </tr>
-                            <tr class="modal-table__row">
-                                <th class="modal-table__header">電話番号</th>
-                                <td class="modal-table__text" id="modal-tel"></td>
-                            </tr>
-                            <tr class="modal-table__row">
-                                <th class="modal-table__header">住所</th>
-                                <td class="modal-table__text" id="modal-address"></td>
-                            </tr>
-                            <tr class="modal-table__row">
-                                <th class="modal-table__header">建物名</th>
-                                <td class="modal-table__text" id="modal-building"></td>
-                            </tr>
-                            <tr class="modal-table__row">
-                                <th class="modal-table__header">お問い合わせの種類</th>
-                                <td class="modal-table__text" id="modal-category"></td>
-                            </tr>
-                            <tr class="modal-table__row">
-                                <th class="modal-table__header">お問い合わせ内容</th>
-                                <td class="modal-table__text" id="modal-detail"></td>
-                            </tr>
-                        </table>
+                <form class="delete-form" action="/admin/delete" method="post">
+                @method('DELETE')
+                @csrf
+                    <div class="delete-form__button">
+                        <input type="hidden" name="id" id="modal-id">
+                        <input class="delete-form__button-submit" type="submit" value="削除">
                     </div>
-                    <form class="delete-form" action="/admin/delete" method="post">
-                    @method('DELETE')
-                    @csrf
-                        <div class="delete-form__button">
-                            <input type="hidden" name="id" id="modal-id">
-                            <input class="delete-form__button-submit" type="submit" value="削除">
-                        </div>
-                    </form>
-                </div>
+                </form>
             </div>
         </div>
     </div>
-
 </div>
 
 <script>

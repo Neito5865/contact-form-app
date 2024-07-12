@@ -9,7 +9,7 @@ use App\Models\Category;
 class AuthController extends Controller
 {
     public function index(){
-        $contacts = Contact::with('category')->get();
+        $contacts = Contact::with('category')->paginate(7);
         $categories = Category::all();
         return view('admin', compact('contacts', 'categories'));
     }
