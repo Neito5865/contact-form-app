@@ -63,6 +63,7 @@ php artisan db:seed
 - MySQL 8.0.26
 
 ## ER図
+![contact-form-app drawio](https://github.com/user-attachments/assets/1a1cc3ac-26c2-4d1e-88f0-509810b0b41f)
 
 ## URL
 ### 開発環境
