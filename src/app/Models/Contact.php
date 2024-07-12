@@ -38,7 +38,7 @@ class Contact extends Model
         }
     }
     public function scopeGenderSearch($query, $gender){
-        if(!empty($gender)){
+        if($gender !==null && $gender !== ''){
             $query->where('gender', $gender);
         }
     }

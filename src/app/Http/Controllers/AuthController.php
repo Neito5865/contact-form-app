@@ -20,7 +20,7 @@ class AuthController extends Controller
     }
 
     public function search(Request $request){
-        $contacts = Contact::with('category')->CategorySearch($request->category_id)->KeywordSearch($request->keyword)->GenderSearch($request->gender)->DateSearch($request->created_at)->get();
+        $contacts = Contact::with('category')->CategorySearch($request->category_id)->KeywordSearch($request->keyword)->GenderSearch($request->gender)->DateSearch($request->created_at)->paginate(7);
         $categories = Category::all();
 
         return view('/admin', compact('contacts', 'categories'));

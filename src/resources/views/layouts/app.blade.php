@@ -17,7 +17,7 @@
         <div class="header__inner">
             <div class="header-utilities">
                 <div class="header__ttl">
-                    <a href="/" class="header__logo">FashionablyLate</a>
+                    <h1 class="header__logo">FashionablyLate</h1>
                 </div>
                 <nav class="nav">
                     <button class="header-nav__button-register"><a href="/register" class="header-nav__link-register">register</a>

@@ -20,14 +20,6 @@ class RegisterRequest extends FormRequest
      * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array<mixed>|string>
      */
 
-    public function prepareForValidation()
-    {
-        $this->merge([
-            'name' => $this->name,
-            'email' => $this->email,
-            'password' => $this->password,
-        ]);
-    }
 
     public function rules(): array
     {
