@@ -58,7 +58,7 @@ php artisan db:seed
 ```
 
 ## 使用技術
-- PHP　8.3.8
+- PHP 8.3.8
 - Laravel 10.0
 - MySQL 8.0.26
 
@@ -66,8 +66,8 @@ php artisan db:seed
 
 ## URL
 ### 開発環境
-- お問い合わせフォーム：　http://localhost/
-- 管理画面：　http://localhost/admin
+- お問い合わせフォーム： http://localhost/
+- 管理画面： http://localhost/admin
 ＊管理画面へアクセスするとログイン認証機能によりログイン画面へ遷移します。
 
 ### phpMyAdmin
